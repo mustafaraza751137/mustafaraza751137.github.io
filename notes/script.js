@@ -40,6 +40,11 @@ function createNoteFromInput(e){
     
     count += 1;
     window.localStorage.setItem("count", count);
+
+    while (window.localStorage.getItem(noteTitle)) {
+        noteTitle = noteTitle + " - 1";
+    }
+
     window.localStorage.setItem(noteTitle , noteBody);
 
     createNote(noteTitle , noteBody);
