@@ -1,4 +1,5 @@
 let count = Number(window.localStorage.getItem("count"));
+window.localStorage.setItem("count", "0");
 if (!count) {
   window.localStorage.setItem("count", "0");
 }
