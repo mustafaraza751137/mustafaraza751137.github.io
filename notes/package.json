@@ -1,0 +1,23 @@
+{
+  "name": "stick-it-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sw-precache": "sw-precache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafaraza751137/mustafaraza751137.github.io/tree/master/notes"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafaraza751137/mustafaraza751137.github.io/issues"
+  },
+  "homepage": "https://github.com/mustafaraza751137/mustafaraza751137.github.io/blob/master/notes/README.md",
+  "dependencies": {
+    "sw-precache": "^5.2.1"
+  }
+}
