@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Order Form</title>
+</head>
+<body>
+    <img id="pic" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60">
+    <form>
+        <div id="request">
+            <h1>Order Request</h1>
+            <p>After you fill out this order request, 
+                we will contact you to go over details and availability before the order is completed.
+                If you would like faster service and direct information on pricing 
+                please contact us at Contact us at (123) 456-7890 or <a href="no_reply@example.com">no_reply@example.com</a>
+            </p>
+        </div>
+        <div class="question">
+            <label>Are you a new or existing customer?</label><br>
+            <input type="radio" name="usertype">
+            <label>I am a new customer</label><br>
+            <input type="radio" name="usertype">
+            <label>I am an existing customer</label><br>
+        </div>
+        <div class="question">
+            <label for="">What is the item you would like to order? <span>*</span></label><br>
+            <input type="text" class="info" placeholder="Your answer" required><br>
+        </div>
+        <div class="question">
+            <label for="">How many items do you want? <span>*</span></label><br>
+            <input type="number" class="info" placeholder="Your answer" required><br>
+        </div>
+        <div class="question">
+            <label for="">Your name <span>*</span></label><br>
+            <input type="text" class="info" placeholder="Your answer" required><br>
+        </div>
+        <div class="question">
+            <label for="">Phone number <span>*</span></label><br>
+            <input type="text" class="info" placeholder="Your answer" required><br>
+        </div>
+        <div class="question">
+            <label for="">E-mail</label><br>
+            <input type="text" class="info" placeholder="Your answer"><br>
+        </div>
+        <div class="question">
+            <label>Preferred contact method</label><br>
+            <input type="checkbox" name="contact">
+            <label>Phone</label><br>
+            <input type="checkbox" name="contact">
+            <label>Email</label><br>
+        </div>
+        <div class="question">
+            <label for="">Question and Comments</label><br>
+            <input type="text" class="info" placeholder="Your answer"><br>
+        </div>
+        <div>
+            <input id="button" type="button" value="Place Order" onclick="myFunction()">
+        </div>
+    </form>
+</body>
+</html>

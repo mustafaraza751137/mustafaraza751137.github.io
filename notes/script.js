@@ -3,6 +3,10 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js');
   }
 
+var itemList = document.getElementById("notes");
+
+itemList.addEventListener("click", removeItem);
+
 let count = Number(window.localStorage.getItem("count"));
 if (!count || count<0) {
   window.localStorage.setItem("count", "0");
@@ -62,12 +66,11 @@ function removeItem(e) {
             let ul = document.getElementById("notes");
 
             ul.removeChild(li);
+            count -= 1;
+            window.localStorage.setItem("count", count);
+            window.localStorage.removeItem(e.target.previousElementSibling.innerText);
         }
     }
-
-    count -= 1;
-    window.localStorage.setItem("count", count);
-    window.localStorage.removeItem(e.target.previousElementSibling.innerText);
 
     if(count<1){
         document.getElementById("no-notes").className="";
@@ -86,7 +89,3 @@ for(i=0;i<count+1;i++){
 document
     .getElementById("inputform")
     .addEventListener("submit",createNoteFromInput , false);
-
-document
-    .getElementById("notes")
-    .addEventListener("click", removeItem);
