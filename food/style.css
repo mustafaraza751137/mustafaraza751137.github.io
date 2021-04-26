@@ -3,22 +3,24 @@ body{
     background-color:cornsilk;
 }
 #pic{
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     height: 200px;
-    object-fit: cover;
     border: solid 1px;
     border-radius: 10px;
+    animation: slider 9s infinite linear;
 }
-div{
+@keyframes slider{
+    0%{background-image: url('food1.jpg');}
+    50%{background-image: url('food2.jpg');}
+    100%{background-image: url('food3.jpg');}
+}
+#request{
     width: 60%;
     margin: auto;
     margin-top: 20px;
     border-radius: 10px;
-}
-#request{
     background-color: white;
     padding-left: 50px;
     padding-right: 20px;
@@ -31,6 +33,10 @@ p{
     line-height: 25px;
 }
 .question{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
     background-color: white;
     padding: 20px;
     padding-left: 50px;
@@ -49,7 +55,8 @@ label{
 #button{
     padding: 10px;
     font-size: 15px;
-    margin-left: 80%;
+    margin-left: 70%;
+    margin-top: 30px;
     background-color: teal;
     color: white;
     border-radius: 5px;
@@ -63,10 +70,10 @@ span{
 }
 @media screen and (max-width: 800px){
     #pic{
-        width: 90%;
-    } 
-    div{
         width: 80%;
+    } 
+    #request , .question{
+        width: 75%;
     }
 }
 @media screen and (max-width: 500px){

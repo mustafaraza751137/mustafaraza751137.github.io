@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Order Form</title>
+    <title>Food Delivery</title>
 </head>
 <body>
-    <img id="pic" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60">
+    <div id="pic"></div>
     <form>
         <div id="request">
             <h1>Order Request</h1>
             <p>After you fill out this order request, 
                 we will contact you to go over details and availability before the order is completed.
                 If you would like faster service and direct information on pricing 
-                please contact us at Contact us at (123) 456-7890 or <a href="no_reply@example.com">no_reply@example.com</a>
+                please contact us at Contact us at <a href="tel:+917088474958">+91 7088 474958</a> or <a href="mailto:mustafaraza751137@gmail.com">mustafaraza751137@gmail.com</a>
             </p>
         </div>
         <div class="question">
@@ -39,6 +39,10 @@
             <input type="text" class="info" placeholder="Your answer" required><br>
         </div>
         <div class="question">
+            <label for="">Address <span>*</span></label><br>
+            <input type="text" class="info" placeholder="Your answer" required><br>
+        </div>
+        <div class="question">
             <label for="">Phone number <span>*</span></label><br>
             <input type="text" class="info" placeholder="Your answer" required><br>
         </div>
@@ -58,7 +62,7 @@
             <input type="text" class="info" placeholder="Your answer"><br>
         </div>
         <div>
-            <input id="button" type="button" value="Place Order" onclick="myFunction()">
+            <input id="button" type="submit" value="Place Order" onclick="myFunction()">
         </div>
     </form>
 </body>
