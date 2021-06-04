@@ -47,11 +47,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 300px;
+  height: 300px;
 }
 #carouselButton {
   right: 0px;
   position: absolute;
   bottom: 0px;
   z-index: 1;
+}
+.media img{
+  height: 150px;
 }
