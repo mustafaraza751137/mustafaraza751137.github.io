@@ -33,8 +33,8 @@ body {
     width:21%;
     height:80px;
     display:flex;
-    justify-content:center ;
-    align-items:center ;
+    justify-content: center;
+    align-items: center;
     background:white;
     cursor: pointer;
 }
