@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <h2 class="variable">Selected Variable:<span>0</span></h2>
+        <h2 class="score">Score:<span>0</span></h2>
+
+        <div class="dice">
+            <!-- <p class="Player">Player</p> -->
+            <img class="img1" src="dice6.png">
+        </div>
+
+        <div>
+            <input class="input" type="button" value="1" onclick="get(this)"/>
+            <input class="input" type="button" value="2" onclick="get(this)"/>
+            <input class="input" type="button" value="3" onclick="get(this)"/><br/>
+            <input class="input" type="button" value="4" onclick="get(this)"/>
+            <input class="input" type="button" value="5" onclick="get(this)"/>
+            <input class="input" type="button" value="6" onclick="get(this)"/>
+        </div>
+
+        <h1 id="counter"></h1>
+    </div>
+    
+    <h2 class="result"></h2>
+
+    <!-- <div class="container bottom">
+        <button type="button" class="butn" 
+            onClick="editNames()">
+            Edit Names
+        </button>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
