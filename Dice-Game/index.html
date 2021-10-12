@@ -9,40 +9,49 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-
-    <title>Document</title>
+    <title>Dice Game</title>
 </head>
 <body>
-    <div class="container">
-        
-        <h2 class="variable">Selected Variable:<span>0</span></h2>
-        <h2 class="score">Score:<span>0</span></h2>
+    <main class="container">
+        <div>
+            <h1>Roll The Dice</h1>
+        </div>
 
-        <div class="dice">
-            <!-- <p class="Player">Player</p> -->
-            <img class="img1" src="images/dice6.png">
+        <div class="dice-score-container">
+            <div class="variable">
+                Selected Variable:<span>0</span>
+            </div>
+            <div class="dice">
+                <img class="img1" src="images/dice6.png">
+            </div>
+            <div class="score">
+                Score:<span>0</span>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <div class="input" onclick="get(this)">1</div>
+            <div class="input" onclick="get(this)">2</div>
+            <div class="input" onclick="get(this)">3</div>
+            <div class="input" onclick="get(this)">4</div>
+            <div class="input" onclick="get(this)">5</div>
+            <div class="input" onclick="get(this)">6</div>
         </div>
 
         <div>
-            <input class="input" type="button" value="1" onclick="get(this)"/>
-            <input class="input" type="button" value="2" onclick="get(this)"/>
-            <input class="input" type="button" value="3" onclick="get(this)"/><br/>
-            <input class="input" type="button" value="4" onclick="get(this)"/>
-            <input class="input" type="button" value="5" onclick="get(this)"/>
-            <input class="input" type="button" value="6" onclick="get(this)"/>
+            <h1 id="counter"></h1>
+        </div>
+        
+        <div>
+            <h2 class="result"></h2>
         </div>
 
-        <h1 id="counter"></h1>
-    </div>
-    
-    <h2 class="result"></h2>
-
-    <div class="container bottom">
-        <button type="button" class="butn" 
-            onClick="editName()">
-            Edit Name
-        </button>
-    </div>
+        <div>
+            <button type="button" class="butn" onClick="editName()">
+                Edit Name
+            </button>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

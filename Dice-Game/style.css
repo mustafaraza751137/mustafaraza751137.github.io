@@ -1,35 +1,60 @@
-body{
-    color: white;
-}
-.container {
-    margin: auto;
-    text-align: center;
-}
-
-.dice {
-    text-align: center;
-    display: inline-block;
-    margin: 10px;
-}
-
 body {
     background-color: #042f4b;
     margin: 0;
     text-align: center;
+    color: white;
 }
 
-p {
-    font-size: 2rem;
-    color: #4ecca3;
-    font-family: "Indie Flower", cursive;
+.container {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    padding: 10px 0;
 }
 
-img {
+.dice-score-container{
+    display: flex;
     width: 100%;
 }
 
-.bottom {
-    padding-top: 30px;
+.variable{
+    width: 40%;
+    font-size: 30px;
+}
+.dice{
+    width: 20%;
+}
+.score{
+    width: 40%;
+    font-size: 30px;
+}
+
+.input-box{
+    box-sizing: border-box;
+    margin: 50px auto;
+    width: 350px;
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    grid-template-columns: auto auto auto;
+}
+
+.input{
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.active{
+    background-color: #4ecca3;
+}
+
+.input:hover{
+    cursor: pointer;
+}
+
+.result{
+    background-color: grey;
 }
 
 .butn {
@@ -47,12 +72,24 @@ img {
     text-decoration: none;
 }
 
-.input{
-    padding: 20px;
-    font-size: 25px;
-    margin: 20px;
-}
-
-.active{
-    background-color: #4ecca3;
+@media screen and (max-width: 400px) {
+    .container{
+        width: 90%;
+    }
+    .dice-score-container{
+        flex-direction: column;
+    }
+    .variable{
+        width: 100%;
+    }
+    .dice{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .score{
+        width: 100%;
+    }
+    .input-box{
+        width: 100%;
+    }
 }

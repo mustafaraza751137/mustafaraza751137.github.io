@@ -2,7 +2,7 @@ var seconds = 4;
 var el = document.getElementById('counter');
 var counter = setInterval(function(){
     seconds -= 1;
-    el.innerText = "The game will start in a few seconds ";
+    el.innerText = "Loading! Game will start in a few second!";
     if(seconds == 0){
         clearInterval(counter);
     }
@@ -10,26 +10,21 @@ var counter = setInterval(function(){
 
 // Player name
 var player = "Player";
-var score = parseInt(document.querySelector(".score span").innerHTML);
-
-// Function to change the player name
-function editName() {
-    player = prompt("Change Player name");
-    document.querySelector("p.Player").innerHTML = player;
-}
+var score = parseInt(document.querySelector(".score span").innerText);
 
 var value=0;
 var btn=document.querySelector(".input");
 
+// Function to get input
 function get(p){
     $(".input").removeClass("active");
     window.btn=p;
-    window.value=btn.value;
-    document.querySelector(".variable span").innerHTML=value;
+    window.value=btn.innerText;
+    document.querySelector(".variable span").innerText=value;
     btn.className="input active";
 }
 
-// Function to roll the dice
+// Function to roll the dice and match with input
 setInterval(function(){
     setTimeout(function () {
         var randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -38,20 +33,21 @@ setInterval(function(){
             "images/dice" + randomNumber + ".png");
         
         if (randomNumber == value) {
-            document.querySelector(".result").innerHTML = (player + ", Your guess was right!");
+            document.querySelector(".result").innerText = (player + ", Your guess was right!");
             score+=10;
-            document.querySelector(".score span").innerHTML=score;
+            document.querySelector(".score span").innerText=score;
         }
 
         else {
-            document.querySelector(".result").innerHTML
-                            = (player + ", Your guess was wrong");
+            document.querySelector(".result").innerText
+                            = (player + ", Your guess was wrong!");
         }
         value=0;
         btn.className="input";
     }, 1000);
 },4000);
 
+// Fuction for timer
 setInterval(function(){
     var seconds = 4;
     var el = document.getElementById('counter');
@@ -63,3 +59,8 @@ setInterval(function(){
         }
     }, 1000);
 },4000);
+
+// Function to change the player name
+function editName() {
+    player = prompt("Change Player name");
+}
