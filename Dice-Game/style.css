@@ -1,5 +1,5 @@
 body {
-    background-color: #042f4b;
+    background-color: #0f353a;
     margin: 0;
     text-align: center;
     color: white;
@@ -12,16 +12,17 @@ body {
     padding: 10px 0;
 }
 
+/* Dice container having score, dice, input value clicked */
 .dice-score-container{
     display: flex;
     width: 100%;
 }
-
 .variable{
     width: 40%;
     font-size: 30px;
 }
 .dice{
+    margin: 0 10px;
     width: 20%;
 }
 .score{
@@ -29,6 +30,7 @@ body {
     font-size: 30px;
 }
 
+/* input value from 1-6 */
 .input-box{
     box-sizing: border-box;
     margin: 50px auto;
@@ -38,44 +40,47 @@ body {
     grid-row-gap: 30px;
     grid-template-columns: auto auto auto;
 }
-
 .input{
     border: 1px solid white;
     padding: 10px;
     font-size: 30px;
 }
-
-.active{
-    background-color: #4ecca3;
-}
-
 .input:hover{
     cursor: pointer;
 }
 
+/* active class when input button clicked */
+.active{
+    background-color: #4ecca3;
+}
+
+/* result for right or wrong guess */
 .result{
     background-color: grey;
 }
 
-.butn {
+/* Edit name btn css */
+.edit-btn {
     background: #4ecca3;
-    font-family: "Indie Flower", cursive;
     border-radius: 7px;
-    color: #ffff;
+    color: white;
     font-size: 30px;
-    padding: 16px 25px 16px 25px;
+    padding: 15px 25px;
     text-decoration: none;
 }
-
-.butn:hover {
+.edit-btn:hover {
     background: #232931;
     text-decoration: none;
 }
 
-@media screen and (max-width: 400px) {
+/* Responsive Design */
+@media screen and (max-width: 750px) {
     .container{
         width: 90%;
     }
+}
+
+@media screen and (max-width: 400px) {
     .dice-score-container{
         flex-direction: column;
     }
