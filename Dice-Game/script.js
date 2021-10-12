@@ -13,7 +13,7 @@ var player = "Player";
 var score = parseInt(document.querySelector(".score span").innerHTML);
 
 // Function to change the player name
-function editNames() {
+function editName() {
     player = prompt("Change Player name");
     document.querySelector("p.Player").innerHTML = player;
 }
@@ -35,7 +35,7 @@ setInterval(function(){
         var randomNumber = Math.floor(Math.random() * 6) + 1;
 
         document.querySelector(".img1").setAttribute("src",
-            "dice" + randomNumber + ".png");
+            "images/dice" + randomNumber + ".png");
         
         if (randomNumber == value) {
             document.querySelector(".result").innerHTML = (player + ", Your guess was right!");
