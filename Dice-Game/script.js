@@ -39,7 +39,7 @@ setInterval(function(){
     
     // checking for result
     if (value == 0){
-        document.querySelector(".result").innerText = (player + ", Your didn't click any option!");
+        document.querySelector(".result").innerText = (player + ", You didn't click any option!");
     }
     else if (randomNumber == value) {
         document.querySelector(".result").innerText = (player + ", Your guess was right!");
