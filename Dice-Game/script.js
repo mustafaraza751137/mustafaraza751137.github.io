@@ -38,15 +38,17 @@ setInterval(function(){
         "images/dice" + randomNumber + ".png");
     
     // checking for result
-    if (randomNumber == value) {
+    if (value == 0){
+        document.querySelector(".result").innerText = (player + ", Your didn't click any option!");
+    }
+    else if (randomNumber == value) {
         document.querySelector(".result").innerText = (player + ", Your guess was right!");
         score+=10;
         document.querySelector(".score span").innerText=score;
     }
 
     else {
-        document.querySelector(".result").innerText
-                        = (player + ", Your guess was wrong!");
+        document.querySelector(".result").innerText = (player + ", Your guess was wrong!");
     }
 
     //changing value to its default value after matching result
